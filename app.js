@@ -5,19 +5,14 @@ var button=document.querySelector("#button");
 
 function clickEventHandler()
 {
-    console.log(inputBillAmt.value)
-    console.log(inputCashRecieved.value)
+
     if(inputBillAmt.value>0)
     {
-        console.log(inputBillAmt.value)
-        console.log(inputCashRecieved.value)
-        if(inputBillAmt.value>inputCashRecieved.value)
+        if(inputBillAmt.value<=inputCashRecieved.value)
         {
-            console.log(inputBillAmt.value)
-            console.log(inputCashRecieved.value)
           var change=inputCashRecieved.value-inputBillAmt.value;
           console.log(change); 
-          showError("WELLDONE")
+          showError("WELL DONE")
         }
         else showError("Cash recieved less than bill amount, ")
     }
