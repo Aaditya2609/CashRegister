@@ -5,15 +5,13 @@ var button=document.querySelector("#button");
 
 function clickEventHandler()
 {
-    var bilamt=inputBillAmt.value;
-    var cash=inputCashRecieved.value
     console.log(inputBillAmt.value)
     console.log(inputCashRecieved.value)
     if(inputBillAmt.value>0)
     {
         console.log(inputBillAmt.value)
         console.log(inputCashRecieved.value)
-        if(cash>bilamt)
+        if(inputBillAmt.value>inputCashRecieved.value)
         {
             console.log(inputBillAmt.value)
             console.log(inputCashRecieved.value)
