@@ -10,23 +10,28 @@ var tableNoOfNotes=document.querySelectorAll(".noOfNotes")
 function clickEventHandler()
 {
 
-    if(inputBillAmt.value>0)
+    if(+inputBillAmt.value>0)
     {
-        if(inputBillAmt.value<=inputCashRecieved.value)
+        if(+inputBillAmt.value<=+inputCashRecieved.value)
         {
-          var change=inputCashRecieved.value-inputBillAmt.value;
-          console.log(change);
+          var change=+inputCashRecieved.value-+inputBillAmt.value;
+          showError("Change to be returned: ",change);
           changeCalculate(change);
         }
-        else showError("Cash recieved less than bill amount, ")
+        else showError1("Cash recieved less than bill amount")
     }
-    else showError("Bill amount should be greater than 0")
+    else showError1("Bill amount should be greater than 0")
 }
 
-function showError(message)
+function showError1(message)
 {
 
     error.innerText=message;
+}
+function showError(message,value)
+{
+
+    error.innerText=message+value;
 }
 function changeCalculate(change)
 {
