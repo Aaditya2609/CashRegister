@@ -25,12 +25,10 @@ function clickEventHandler()
 
 function showError1(message)
 {
-
     error.innerText=message;
 }
 function showError(message,value)
 {
-
     error.innerText=message+value;
 }
 function changeCalculate(change)
