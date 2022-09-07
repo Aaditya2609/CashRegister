@@ -19,6 +19,7 @@ function clickEventHandler()
           changeCalculate(change);
         }
         else showError1("Cash recieved less than bill amount")
+            
     }
     else showError1("Bill amount should be greater than 0")
 }
@@ -26,10 +27,12 @@ function clickEventHandler()
 function showError1(message)
 {
     error.innerText=message;
+    changeCalculate(0);
 }
 function showError(message,value)
 {
     error.innerText=message+value;
+    changeCalculate(0);
 }
 function changeCalculate(change)
 {
